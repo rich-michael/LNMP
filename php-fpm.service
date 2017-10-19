@@ -1,0 +1,10 @@
+[Unit]
+Description=The PHP7 php-fpm 
+After=network.target
+[Service]
+Type=simple
+PIDFile=/run/php-fpm.pid
+ExecStart=/etc/init.d/php-fpm
+ExecReload=/usr/bin/kill -USR2 $MAINPID
+[Install]
+WantedBy=multi-user.target
