@@ -4,7 +4,7 @@ After=network.target
 [Service]
 Type=simple
 PIDFile=/run/php-fpm.pid
-ExecStart=/etc/init.d/php-fpm
+ExecStart=/usr/local/php/sbin/php-fpm
 ExecReload=/usr/bin/kill -USR2 $MAINPID
 [Install]
 WantedBy=multi-user.target
